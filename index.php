@@ -6,6 +6,43 @@ You may break something if you do not know what you are doing. -- LordNature <3
 
 require_once( "config.php" );
 
+// Fetches SteamID
+if ( !isset( $_GET["steamid"] ) ) {
+	echo "<span style='color:#FF0000;font-size:50px;font-family:Arial,sans-serif;'>You are not using the correct URL format. Make sure it looks like this:</span>\n<pre><code style='font-size:40px;'>" . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] . "?steamid=%s&map=%m</code></pre>";
+	die();
+} else {
+	$steamid = $_GET["steamid"];
+	$map = $_GET['map'];
+}
+
+
+/* Fetches MapIcon
+$mapiconURL = "http://image.www.gametracker.com/images/maps/160x120/garrysmod/" . $map . ".jpg";
+
+if ( !$mapicon = file_get_contents($mapicon) ) {
+	$mapicon = file_get_contents( "http://image.www.gametracker.com/images/maps/160x120/nomap.jpg" );
+}
+
+$mapicon = base64_encode($mapicon);
+$mapicon = 'data: ' . mime_content_type($mapiconURL) . ';base64,' . $imageData;
+*/
+
+// Queries the SteamAPIKey
+if ($config['SteamAPIKey'] == "") {
+	echo "<span style='color: #FF0000; font-size: 50px; font-family: Arial,sans-serif;'>You don't appear to have a Steam API key! Remember to set your API key in the config like this:</span>\n<pre><code style='font-size: 40px;'>\$config['SteamAPIKey'] = \"YOUR STEAM API KEY\";</code></pre>";
+	die();
+} else {
+	$url = "http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=" . $config['SteamAPIKey'] . "&steamids=" . $steamid;
+}
+$js = file_get_contents($url);
+$fetcher = json_decode($js, true);
+if (isset($fetcher["response"]["players"][0])) {
+	$fetch = $fetcher["response"]["players"][0];
+} else {
+	echo "<span style='color: #FF0000; font-size: 50px; font-family: Arial,sans-serif;'>Error querying Steam API...</span>";
+	die();
+}
+
 // This is the theme IF statement.
 if ( $config['theme'] == "1" ) {
 	$theme = "cerulan";
@@ -57,8 +94,14 @@ if ( $config['theme'] == "1" ) {
 		<title>Simplexity <?php echo $config['version']; ?></title>
 	</head>
 	<body>
-
-		Nothing as of this moment.
+		
+		<?php
+		if ( file_exists( "designs/" . $config['designName'] ) ) { // This checks to see if the design exists.
+			require_once( "designs/" . $config['designName'] . "/index.php" ); // Includes the design.
+		} else {
+			echo "Error 404: File not found."; // Not found? 404 them.
+		}
+		?>
 
 	</body>
 </html>
