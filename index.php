@@ -1,5 +1,5 @@
 <?php
-/* Simplexity v0.2
+/* Simplexity v0.4
 Note: Do NOT touch this script unless you are sending a GitHub Pull Request (aka editing the script to fix a bug or add a feature)
 You may break something if you do not know what you are doing. -- LordNature <3
 */
@@ -8,7 +8,7 @@ require_once( "config.php" );
 
 // Fetches SteamID
 if ( !isset( $_GET["steamid"] ) ) {
-	echo "<span style='color:#FF0000;font-size:50px;font-family:Arial,sans-serif;'>You are not using the correct URL format. Make sure it looks like this:</span>\n<pre><code style='font-size:40px;'>" . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] . "?steamid=%s&map=%m</code></pre>";
+	echo "<span style='color: #FF0000; font-size: 50px; font-family: Arial,sans-serif;'>You are not using the correct URL format. Make sure it looks like this:</span>\n<pre><code style='font-size:40px;'>" . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] . "?steamid=%s&map=%m</code></pre>";
 	die();
 } else {
 	$steamid = $_GET["steamid"];

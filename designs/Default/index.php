@@ -3,6 +3,8 @@
 require_once ( "Designs/" . $config['designName'] . "/config.php" );
 ?>
 
+<section class="design" style="font-family: <?php echo $config['fontname']; ?>">
+
 	<div class="container">
 
 		<!-- Logo -->
@@ -10,7 +12,7 @@ require_once ( "Designs/" . $config['designName'] . "/config.php" );
 			<?php if($config['logoType'] == 2){ ?>
 			<img src="modules/logo.png" />
 			<?php } else { ?>
-			<span style="font-size: 100px; font-family: Play; color: #000; float: center;"><?php echo $config['name']; ?></span>
+			<span style="font-size: 100px; color: #000; text-align: center;"><?php echo $config['name']; ?></span>
 			<?php } ?>
 		</div>
 
@@ -148,4 +150,5 @@ require_once ( "Designs/" . $config['designName'] . "/config.php" );
 		<b><?php echo $fetch['personaname']; ?></b> is listening to "Some Cool Music by CoolGuy".
 	</div>-->
 
+</section>
 <!-- /Second Design -->

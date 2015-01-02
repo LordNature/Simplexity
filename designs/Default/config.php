@@ -21,5 +21,4 @@ $config['rules'][8]	 = "Do not micspam.";
 $config['rules'][9]	 = "Do not kill AFK players.";
 $config['rules'][10] = "Rule 10";
 $config['rules'][11] = "Rule 11";
-//RULES ARE LIMITED TO 11 ON ALL DESIGNS EXCEPT FIRST WHICH IS LIMITED TO 9
 ?>

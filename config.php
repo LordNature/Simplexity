@@ -3,7 +3,7 @@
 This is the main configuration for Simplexity. Everything in here modifies the main loading screen.
 */
 $config = array(); // This makes $config into an array.
-$config['version'] = "v0.3"; // This is the version of Simplexity.
+$config['version'] = "v0.4"; // This is the version of Simplexity.
 $config['bsversion'] = "3.3.1"; // This is the version of Bootstrap.
 
 /* Misc Section
