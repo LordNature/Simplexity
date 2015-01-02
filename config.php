@@ -11,7 +11,7 @@ These configurations don't belong in a group, so they are miscellaneous.
 */
 $config['name'] = "Simplexity"; // This is the name of the server.
 $config['logoType'] = 1; // This is the type of logo. 1=Text, 2=Image. If the logo is image, put a file named 'logo.png' in the modules directory.
-$config['SteamAPIKey'] = "755C5F88A261C3DDC7E2CFDAC7534D89"; // This is the SteamAPIKey. You can find this at http://steamcommunity.com/dev/apikey
+$config['SteamAPIKey'] = "PUT YOUR API KEY HERE"; // This is the SteamAPIKey. You can find this at http://steamcommunity.com/dev/apikey
 
 /* Aesthetics Section
 This allows to change the main 'themes' or 'designs' (layouts) of Simplexity.
