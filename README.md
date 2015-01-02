@@ -6,3 +6,5 @@ This loading screen has the capability of allowing others to create 'designs' fo
 The 'designs' are 'layouts' of the information.
 
 Current build is __sorta__ stable.
+
+We have a ![Trello](https://trello.com/b/Uc5fdfcA/simplexity)
