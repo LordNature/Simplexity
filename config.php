@@ -16,8 +16,8 @@ $config['SteamAPIKey'] = "755C5F88A261C3DDC7E2CFDAC7534D89"; // This is the Stea
 /* Aesthetics Section
 This allows to change the main 'themes' or 'designs' (layouts) of Simplexity.
 */
-$config['fontname'] = "Play"; // This is the font name from Google Fonts.
-$config['theme'] = "flatly"; // This is the Bootswatch Theme. (Type 'css' for default)
+$config['fontname']   = "Play"; // This is the font name from Google Fonts.
+$config['theme']      = "flatly"; // This is the Bootswatch Theme. (Type 'css' for default)
 $config['designName'] = "Default"; // This is the design (aka layout) for Simplexity. (Hint: The name of the folder.)
 
 /* Music Section
@@ -25,7 +25,11 @@ This allows you to change the music.
 */
 $config['music'] = true; // This enables/disables music.
 $config['type'] = "youtube"; // This is the type of music. Choices: youtube or ogg
-$config['youtubevid'] = "";
+
+// Add YouTube IDs to the list below. Make sure you follow the same format as is there already (e.g. 'one', 'two', 'three')
+$config['youtubevids'] = array(
+		'',
+	);
 $config['volume'] = "30"; // This is the volume of the ogg file.
 
 /*
