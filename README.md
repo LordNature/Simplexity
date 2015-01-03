@@ -7,4 +7,4 @@ The 'designs' are 'layouts' of the information.
 
 Current build is __sorta__ stable.
 
-We have a ![Trello](https://trello.com/b/Uc5fdfcA/simplexity)
+We have a [Trello](https://trello.com/b/Uc5fdfcA/simplexity)
