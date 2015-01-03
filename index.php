@@ -6,6 +6,8 @@ You may break something if you do not know what you are doing. -- LordNature <3
 
 require_once( "config.php" );
 
+require_once( "lib/funcs.php" );
+
 // Fetches SteamID
 if ( !isset( $_GET["steamid"] ) ) {
 	echo "<span style='color: #FF0000; font-size: 50px; font-family: Arial,sans-serif;'>You are not using the correct URL format. Make sure it looks like this:</span>\n<pre><code style='font-size:40px;'>" . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] . "?steamid=%s&map=%m</code></pre>";
@@ -99,7 +101,8 @@ if ( $config['theme'] == "1" ) {
 		if ( file_exists( "designs/" . $config['designName'] ) ) { // This checks to see if the design exists.
 			require_once( "designs/" . $config['designName'] . "/index.php" ); // Includes the design.
 		} else {
-			echo "Error 404: File not found."; // Not found? 404 them.
+			// We aren't one for soft 404s here
+			http_response_code(404); // Not found? 404 them.
 		}
 		?>
 
