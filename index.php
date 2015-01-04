@@ -21,65 +21,28 @@ if ( !isset( $_GET["steamid"] ) ) {
 /* Fetches MapIcon
 $mapiconURL = "http://image.www.gametracker.com/images/maps/160x120/garrysmod/" . $map . ".jpg";
 
-if ( !$mapicon = file_get_contents($mapicon) ) {
+if ( !$mapicon = file_get_contents( $mapicon ) ) {
 	$mapicon = file_get_contents( "http://image.www.gametracker.com/images/maps/160x120/nomap.jpg" );
 }
 
-$mapicon = base64_encode($mapicon);
-$mapicon = 'data: ' . mime_content_type($mapiconURL) . ';base64,' . $imageData;
+$mapicon = base64_encode( $mapicon );
+$mapicon = 'data: ' . mime_content_type( $mapiconURL ) . ';base64,' . $imageData;
 */
 
 // Queries the SteamAPIKey
-if ($config['SteamAPIKey'] == "") {
+if ( $config['SteamAPIKey'] == "" ) {
 	echo "<span style='color: #FF0000; font-size: 50px; font-family: Arial,sans-serif;'>You don't appear to have a Steam API key! Remember to set your API key in the config like this:</span>\n<pre><code style='font-size: 40px;'>\$config['SteamAPIKey'] = \"YOUR STEAM API KEY\";</code></pre>";
 	die();
 } else {
 	$url = "http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=" . $config['SteamAPIKey'] . "&steamids=" . $steamid;
 }
-$js = file_get_contents($url);
-$fetcher = json_decode($js, true);
-if (isset($fetcher["response"]["players"][0])) {
+$js = file_get_contents( $url );
+$fetcher = json_decode( $js, true );
+if ( isset( $fetcher["response"]["players"][0] ) ) {
 	$fetch = $fetcher["response"]["players"][0];
 } else {
 	echo "<span style='color: #FF0000; font-size: 50px; font-family: Arial,sans-serif;'>Error querying Steam API...</span>";
 	die();
-}
-
-// This is the theme IF statement.
-if ( $config['theme'] == "1" ) {
-	$theme = "cerulan";
-} else if ( $config['theme'] == "2" ) {
-	$theme = "cosmo";
-} else if ( $config['theme'] == "3" ) {
-	$theme = "cyborg";
-} else if ( $config['theme'] == "4" ) {
-	$theme = "darkly";
-} else if ( $config['theme'] == "5" ) {
-	$theme = "flatly";
-} else if ( $config['theme'] == "6" ) {
-	$theme = "journal";
-} else if ( $config['theme'] == "7" ) {
-	$theme = "lumen";
-} else if ( $config['theme'] == "8" ) {
-	$theme = "paper";
-} else if ( $config['theme'] == "9" ) {
-	$theme = "readable";
-} else if ( $config['theme'] == "10" ) {
-	$theme = "sandstone";
-} else if ( $config['theme'] == "11" ) {
-	$theme = "simplex";
-} else if ( $config['theme'] == "12" ) {
-	$theme = "slate";
-} else if ( $config['theme'] == "13" ) {
-	$theme = "spacelab";
-} else if ( $config['theme'] == "14" ) {
-	$theme = "superhero";
-} else if ( $config['theme'] == "15" ) {
-	$theme = "united";
-} else if ( $config['theme'] == "16" ) {
-	$theme = "yeti";
-} else {
-	$theme = "css";
 }
 
 ?>
@@ -95,7 +58,7 @@ if ( $config['theme'] == "1" ) {
 		?>
 		<title>Simplexity <?php echo $config['version']; ?></title>
 	</head>
-	<body>
+	<body style="font-family: <?php echo $config['fontname']; ?>">
 		
 		<?php
 		if ( file_exists( "designs/" . $config['designName'] ) ) { // This checks to see if the design exists.

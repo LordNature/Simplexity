@@ -10,8 +10,9 @@ Theme 'can' have a config.php.
 All included files must be in the theme's folder unless using a CDN.
 
 Make sure to include files like so:
+```
 <?php
 require_once ( "Designs/" . $config['designName'] . "/config.php" );
 ?>
-
 <img src="Designs/<?php echo $config['designName']; ?>/main.png" />
+```
