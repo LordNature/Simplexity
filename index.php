@@ -6,7 +6,7 @@ You may break something if you do not know what you are doing. -- LordNature <3
 
 require_once( "config.php" );
 
-require_once( "lib/funcs.php" );
+//require_once( "lib/funcs.php" );
 
 // Fetches SteamID
 if ( !isset( $_GET["steamid"] ) ) {
@@ -58,7 +58,7 @@ if ( isset( $fetcher["response"]["players"][0] ) ) {
 		?>
 		<title>Simplexity <?php echo $config['version']; ?></title>
 	</head>
-	<body style="font-family: <?php echo $config['fontname']; ?>">
+	<body class="animated-bg" style="background-color: #9966FF; font-family: <?php echo $config['fontName']; ?>">
 		
 		<?php
 		if ( file_exists( "designs/" . $config['designName'] ) ) { // This checks to see if the design exists.
@@ -69,5 +69,6 @@ if ( isset( $fetcher["response"]["players"][0] ) ) {
 		}
 		?>
 
+	<script src="modules/animated-bg.js"></script>
 	</body>
 </html>
