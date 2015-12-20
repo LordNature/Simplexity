@@ -12,8 +12,8 @@ $config['bsVersion'] = "3.3.5";
  */
 $config['name'] = "Simplexity ALPHA"; // This is the server's name.
 //$config['logoType'] = 1; // This is the type of logo. 1 being the text and 2 being the image. Image directory depends on the theme developer.
-$config['steamKey'] = "3C5D900E758C51629BC92ACDDBBEE5C3"; // Steam API Key @ http://steamcommunity.com/dev/apikey
-$config['youtubeKey'] = "AIzaSyCVV9nkCnn4zKsQEsZ_W_neuWJTetTetPo"; // Not required unless you want utube title to display Youtube API Key @ https://www.youtube.com/watch?v=9fNP_fJsxX0
+$config['steamKey'] = "GG LEFT API KEY"; // Steam API Key @ http://steamcommunity.com/dev/apikey
+$config['youtubeKey'] = "GG LEFT API KEY"; // Not required unless you want utube title to display Youtube API Key @ https://www.youtube.com/watch?v=9fNP_fJsxX0
 
 /* Aesthetics Section
  * This allows to change the main 'themes' or 'designs' (layouts) of Simplexity.
