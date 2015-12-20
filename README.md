@@ -8,3 +8,16 @@ The 'designs' are 'layouts' of the information.
 Current build is __sorta__ stable.
 
 We have a [Trello](https://trello.com/b/Uc5fdfcA/simplexity)
+
+# Designs
+
+Designs are a nice way to customize your loading screen.
+We have tried our best to make it as user-friendly to CSS/HTML developers as possible.
+All options are available from the main configuration and we make it easy for developers to get the code.
+
+## Code
+
+#### Music
+```php
+
+```
