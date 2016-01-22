@@ -1,7 +1,11 @@
 Simplexity
 ==========
 
+<<<<<<< HEAD
 ![GIF](https://scr.metagala.xyz/1453436893.jpg)
+=======
+![GIF](http://scr.metagala.xyz/1453435331.gif)
+>>>>>>> origin/master
 
 Simplexity is a __simple__, yet __stylish__ loading screen.
 This loading screen has the capability of allowing others to create designs for it.
