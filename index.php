@@ -1,5 +1,5 @@
 <?php
-/* DISCLAIMER: If this script was SOLD to you, you were scammed. Attempt getting your money back. This is FREE on GitHub. */
+ini_set( "error_reporting", 0 );
 require_once( "config.php" );
 
 $ranTube = array_rand( $config['youtubeVids'] );
@@ -62,8 +62,8 @@ function youtube_title( $id ) {
     </head>
     <body style="font-family: <?php echo $config['fontName']; ?>">
         <?php
-            if ( file_exists( "designs/" . $config['designName'] ) ) { // This checks to see if the design exists.
-                require_once( "designs/" . $config['designName'] . "/index.php" ); // Includes the design.
+            if ( file_exists( "designs/" . $config['designName'] ) ) {
+                require_once( "designs/" . $config['designName'] . "/index.php" );
             } else {
                 die( "<h1 class=\"text-center\">Error 404</h1><h5 class=\"text-center\">Please set \$config['designName'] to a valid theme.</h5>" );
             }
