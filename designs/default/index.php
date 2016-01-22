@@ -68,7 +68,7 @@
 				  <div class="panel-body">
 			  		<img class="img-responsive mapIcon"src="<?php echo $mapicon; ?>">
 			  		<div class="mapText">
-			  			<div class="list-group-item"><i class="fa fa-map-marker"></i><b class="pull-right" id="servermap">de_dolls</b></div>
+			  			<div class="list-group-item"><i class="fa fa-map-marker"></i><b class="pull-right" id="servermap"><?php echo $map; ?></b></div>
 			  			<div class="list-group-item"><i class="fa fa-gamepad"></i><b class="pull-right" id="servergm">terrortown</b></div>
 			  		</div>
 				  </div>
