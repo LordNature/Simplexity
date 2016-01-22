@@ -1,7 +1,7 @@
 Simplexity
 ==========
 
-![GIF](https://scr.metagala.xyz/1453435331.gif)
+![GIF](http://scr.metagala.xyz/1453435331.gif)
 
 Simplexity is a __simple__, yet __stylish__ loading screen.
 This loading screen has the capability of allowing others to create designs for it.
