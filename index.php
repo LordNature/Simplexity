@@ -51,6 +51,13 @@ function youtube_title( $id ) {
         return false;
     }
 }
+
+// too prevent death from sound
+if ( $config['volume'] > 15) {
+	$volume = "15";
+} else {
+	$volume = $config['volume'];
+}
 ?><html>
     <head>
         <meta charset="UTF-8">
@@ -93,7 +100,7 @@ function youtube_title( $id ) {
         
                 function onPlayerReady(event) {
                     event.target.playVideo();
-                    event.target.setVolume(<?php echo $config['volume']; ?>);
+                    event.target.setVolume(<?php echo $volume ?>);
                 }
                 
             function onPlayerStateChange(event) {

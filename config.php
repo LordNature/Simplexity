@@ -74,5 +74,5 @@ $config['youtubeVids'] = array(
         'vViSeEUGM9g',
         '1-0-4HqyvXE'
     );
-$config['volume'] = "10"; // This is the volume of youtube songs.
+$config['volume'] = "10"; // This is the volume of youtube songs. *SAFETY FEATURE BUILT IN* Max Volume is 15% as people don't wanna get ear raped by your shitty music.
 ?>
