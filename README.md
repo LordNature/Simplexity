@@ -1,8 +1,6 @@
 Simplexity
 ==========
 
-![Screeny](https://scr.metagala.xyz/1453436893.jpg)
-
 Simplexity is a __simple__, yet __stylish__ loading screen.
 This loading screen has the capability of allowing others to create designs for it.
 The 'designs' are layouts of the information.
