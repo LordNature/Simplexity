@@ -1,0 +1,22 @@
+{
+  "name": "simplexity",
+  "version": "0.0.1",
+  "description": "A 'simple', yet 'stylish' loading screen.",
+  "main": "",
+  "devDependencies": {
+    "stylus" : "*"
+  }
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LordNature/Simplexity.git"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/LordNature/Simplexity/issues"
+  },
+  "homepage": "https://github.com/LordNature/Simplexity#readme"
+}
